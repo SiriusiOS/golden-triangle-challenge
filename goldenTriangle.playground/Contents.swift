@@ -7,7 +7,7 @@ func goldenTriangle(arr: [Int]) -> Bool {
     let tri = arr.sorted()
 
     for i in 0 ... tri.count - 3 {
-        if tri[i] + tri[i + 1] > tri[i + 2] {
+        if tri[i] + tri[i + 1] > tri[i + 2], tri[i] + tri[i + 2] > tri[i + 1], tri[i + 2] + tri[i + 1] > tri[i] {
             return true
         }
     }
